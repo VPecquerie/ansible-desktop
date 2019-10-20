@@ -1,0 +1,23 @@
+---
+- include_vars: 00-vars.yml
+
+- name: '[SNAP] Install snaps Packages'
+  command: snap install {{ item }} --classic
+  with_items: "{{ snaps }}"
+
+- name: '[SNAP] Find Desktop files'
+  find:  paths="/var/lib/snapd/desktop/applications" recurse=yes patterns="*.desktop"
+  register: find_files
+
+- name: '[SNAP] Find Menu entries'
+  set_fact:
+    all_files:
+      - "{{ find_files.files | map(attribute='path') | list }}"
+  when: find_files > 0
+
+- name: '[SNAP] Copy Menu entries'
+  copy:
+    src: "{{ item }}"
+    dest: /usr/share/applications/
+  with_items: "{{ all_files }}"
+  when: find_files > 0

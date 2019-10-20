@@ -1,0 +1,12 @@
+---
+- include_vars: 00-vars.yml
+
+- name: '[FONTS] Clone GIT Repository'
+  git: >
+    repo=https://github.com/ryanoasis/nerd-fonts.git
+    dest={{home}}/.nerd_fonts
+    depth=1
+
+- name: '[FONTS] Install all Fonts'
+  command: chdir={{home}}/.nerd_fonts bash install.sh -S
+

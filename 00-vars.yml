@@ -1,0 +1,93 @@
+user:
+  username: vpecquerie
+  display_name: Vincent PECQUERIE
+  homedir: /home/vpecquerie
+  uid: 1000
+  shell: /bin/zsh
+
+repositories:
+ docker:
+  repository: deb [arch=amd64] https://download.docker.com/linux/ubuntu bionic stable
+  key_url: https://download.docker.com/linux/ubuntu/gpg
+ chrome:
+  repository: deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main
+  key_url: https://dl-ssl.google.com/linux/linux_signing_key.pub
+
+packages:
+ - default-jre
+ - default-jdk
+ - build-essential
+ - vim
+ - zsh
+ - python3.6
+ - python3-pip
+ - docker-ce
+ - mysql-workbench
+ - httpie
+ - jq
+ - google-chrome-stable
+ - snapd
+ - glances
+ - htop
+ - openssh-server
+ - gnupg2
+ - sshfs
+ - rsync 
+ - grsync
+ - gnome-themes-extra
+ - materia-gtk-theme
+ - remmina 
+ - remmina-plugin-rdp
+
+debs: 
+  teamviewer:
+    url: https://download.teamviewer.com/download/linux/teamviewer_amd64.deb
+
+pip: 
+ - archey4
+
+snaps:
+ - spotify
+ - slack
+ - postman
+ - code
+ - gitkraken
+ - mailspring
+ - vlc
+ - android-studio
+ - rubymine
+ - phpstorm
+ - caprine
+ - brave
+
+gems: 
+ - lolcat
+ - colorls
+ - catpix
+
+npms:
+ - fx
+ - dockly
+
+binaries:
+
+  docker_compose:
+    name: docker-compose
+    url: https://github.com/docker/compose/releases/download/1.24.1/docker-compose-Linux-x86_64
+    zsh_completion: https://raw.githubusercontent.com/docker/compose/1.24.1/contrib/completion/zsh/_docker-compose
+
+  docker_machine:
+    name: docker-machine
+    url: https://github.com/docker/machine/releases/download/v0.16.2/docker-machine-Linux-x86_64
+    zsh_completion: https://raw.githubusercontent.com/docker/machine/v0.16.2/contrib/completion/zsh/_docker-machine
+
+vscode_extensions: 
+  - fallenwood.vimL
+  - eg2.tslint
+  - fatihacet.gitlab-workflow
+  - robertohuertasm.vscode-icons
+  - PeterJausovec.vscode-docker
+  - ms-vscode.csharp
+  - HookyQR.beautify
+  - ms-mssql.mssql
+  - m-thorsen.vscode-material-mt
