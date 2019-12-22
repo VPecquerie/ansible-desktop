@@ -48,7 +48,8 @@ debs:
     url: https://download.teamviewer.com/download/linux/teamviewer_amd64.deb
   gitkraken:
     url: https://release.gitkraken.com/linux/gitkraken-amd64.deb
-
+  vscode:
+    url: https://go.microsoft.com/fwlink/?LinkID=760868
 targz:
   jetbrains_toolbox:
     url: https://download.jetbrains.com/toolbox/jetbrains-toolbox-1.16.6207.tar.gz
@@ -58,12 +59,8 @@ snaps:
  - spotify
  - slack
  - postman
- - code
  - mailspring
  - vlc
- - android-studio
- - rubymine
- - phpstorm
  - caprine
 
 gems: 
