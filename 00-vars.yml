@@ -12,6 +12,9 @@ repositories:
  chrome:
   repository: deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main
   key_url: https://dl-ssl.google.com/linux/linux_signing_key.pub
+ brave:
+  repository: deb [arch=amd64] https://brave-browser-apt-release.s3.brave.com/ stable main
+  key_url: https://brave-browser-apt-release.s3.brave.com/brave-core.asc
 
 packages:
  - default-jre
@@ -38,6 +41,7 @@ packages:
  - materia-gtk-theme
  - remmina 
  - remmina-plugin-rdp
+ - brave
 
 debs: 
   teamviewer:
@@ -61,7 +65,6 @@ snaps:
  - rubymine
  - phpstorm
  - caprine
- - brave
 
 gems: 
  - lolcat
