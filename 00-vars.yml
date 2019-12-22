@@ -42,16 +42,19 @@ packages:
 debs: 
   teamviewer:
     url: https://download.teamviewer.com/download/linux/teamviewer_amd64.deb
+  gitkraken:
+    url: https://release.gitkraken.com/linux/gitkraken-amd64.deb
 
-pip: 
- - archey4
+targz:
+  jetbrains_toolbox:
+    url: https://download.jetbrains.com/toolbox/jetbrains-toolbox-1.16.6207.tar.gz
+    target_dir: /opt/jetbrains-toolbox
 
 snaps:
  - spotify
  - slack
  - postman
  - code
- - gitkraken
  - mailspring
  - vlc
  - android-studio
@@ -73,8 +76,8 @@ binaries:
 
   docker_compose:
     name: docker-compose
-    url: https://github.com/docker/compose/releases/download/1.24.1/docker-compose-Linux-x86_64
-    zsh_completion: https://raw.githubusercontent.com/docker/compose/1.24.1/contrib/completion/zsh/_docker-compose
+    url: https://github.com/docker/compose/releases/download/1.25.0/docker-compose-Linux-x86_64
+    zsh_completion: https://raw.githubusercontent.com/docker/compose/1.25.0/contrib/completion/zsh/_docker-compose
 
   docker_machine:
     name: docker-machine
@@ -91,3 +94,4 @@ vscode_extensions:
   - HookyQR.beautify
   - ms-mssql.mssql
   - m-thorsen.vscode-material-mt
+  - johnpapa.angular-essentials
