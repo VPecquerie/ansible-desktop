@@ -41,7 +41,7 @@ packages:
  - materia-gtk-theme
  - remmina 
  - remmina-plugin-rdp
- - brave
+ - brave-browser
 
 debs: 
   teamviewer:
@@ -50,6 +50,7 @@ debs:
     url: https://release.gitkraken.com/linux/gitkraken-amd64.deb
   vscode:
     url: https://go.microsoft.com/fwlink/?LinkID=760868
+
 targz:
   jetbrains_toolbox:
     url: https://download.jetbrains.com/toolbox/jetbrains-toolbox-1.16.6207.tar.gz
