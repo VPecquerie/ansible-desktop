@@ -42,6 +42,12 @@ packages:
  - remmina 
  - remmina-plugin-rdp
  - brave-browser
+ - ruby
+ - ruby-dev
+ - libncurses5-dev 
+ - libncursesw5-dev
+ - libmagickwand-dev
+ - libmagick++-dev
 
 debs: 
   teamviewer:
@@ -54,7 +60,7 @@ debs:
 targz:
   jetbrains_toolbox:
     url: https://download.jetbrains.com/toolbox/jetbrains-toolbox-1.16.6207.tar.gz
-    target_dir: /opt/jetbrains-toolbox
+    target_dir: /opt/
 
 snaps:
  - spotify
