@@ -3,8 +3,8 @@
 
 - name: '[TARGZ] Download .tar.gz'
   get_url: url={{ item.value.url }} dest=/tmp/{{ item.key }}.tar.gz validate_certs=no
-  with_items: "{{ targz }}"
+  with_dict: "{{ targz }}"
 
 - name: '[TARGZ] Extract .tar.gz'
   unarchive: src=/tmp/{{ item.key }}.tar.gz dest={{ item.value.target_dir }}
-  with_items: "{{ targz }}"
+  with_dict: "{{ targz }}"
