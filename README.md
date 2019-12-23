@@ -3,7 +3,12 @@
 ## TL;DR : One Step Install.
 
 ```bash
-wget -qO- https://raw.githubusercontent.com/VPecquerie/ansible-desktop/master/install.sh | bash
+git clone https://github.com/VPecquerie/ansible-desktop.git ~/.ansible-configuration
+cd ~/.ansible-configuration
+chmod +x install.sh
+
+# Please review any script from internet before using it.
+./install.sh
 ```
 
 ## Introduction
