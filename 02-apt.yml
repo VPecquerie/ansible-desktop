@@ -9,7 +9,10 @@
 
 - name: '[APT] Download Signing Keys'
   become: yes
-  apt_key: url={{ item.value.key_url }} state=present
+  apt_key: 
+    url: '{{ item.value.key_url }}'
+    state: present
+    validate_certs: no
   with_dict: "{{ repositories }}"
   when: item.value.key_url is defined
 
