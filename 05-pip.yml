@@ -3,5 +3,7 @@
 
 - name: '[PIP] Install PIP packages'
   pip:
-    name: "{{ pip }}"
+    name: "{{ item }}"
     executable: pip3
+  with_items: "{{ pips | default([]) }}"
+
