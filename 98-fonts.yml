@@ -4,9 +4,9 @@
 - name: '[FONTS] Clone GIT Repository'
   git: >
     repo=https://github.com/ryanoasis/nerd-fonts.git
-    dest={{home}}/.nerd_fonts
+    dest={{user.homedir}}/.nerd_fonts
     depth=1
 
 - name: '[FONTS] Install all Fonts'
-  command: chdir={{home}}/.nerd_fonts bash install.sh -S
+  command: chdir={{user.homedir}}/.nerd_fonts bash install.sh -S
 

@@ -9,17 +9,17 @@
 - name: '[CUSTOM] Clone dotfiles'
   git: 
     repo: 'https://github.com/VPecquerie/dotfiles.git'
-    dest: '{{home}}/.dotfiles'
+    dest: '{{user.homedir}}/.dotfiles'
 
 - name: '[CUSTOM] Install dotfiles'
   command: 'bash install.sh'
   args:
-    chdir: '{{home}}/.dotfiles'
+    chdir: '{{user.homedir}}/.dotfiles'
 
 - name: '[CUSTOM] Fix HomeDir permissions'
   file: 
-    path: '{{home}}'
+    path: '{{user.homedir}}'
     state: directory
-    owner: '{{username}}'
-    group: '{{username}}'
+    owner: '{{user.username}}'
+    group: '{{user.username}}'
     recurse: yes
