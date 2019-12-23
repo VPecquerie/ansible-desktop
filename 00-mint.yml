@@ -8,6 +8,7 @@
    - include: 05-pip.yml
    - include: 06-gems.yml
    - include: 07-snap.yml
-   - include: updates.yml
+   - include: 08-updates.yml
+   - include: 09-targz-apps.yml
    - include: 98-fonts.yml
    - include: 99-custom.yml
