@@ -16,6 +16,13 @@
   args:
     chdir: '{{user.homedir}}/.dotfiles'
 
+# https://gist.github.com/reavon/0bbe99150810baa5623e5f601aa93afc
+- name: '[CUSTOM] Get gnome-terminal profile id'
+  command: dconf dump /org/gnome/terminal/legacy/profiles:/ | grep '\[:' | head -n 1 | cut -d ':' -f2 | cut -d ']' -f1 > /tmp/profileid
+
+- name: '[CUSTOM] Set Gnome terminal properties'
+  commands: 'dconf load /org/gnome/terminal/legacy/profiles:/:$(cat /tmp/profileid)/ < .config/material-theme-profile.dconf'
+
 - name: '[CUSTOM] Fix HomeDir permissions'
   file: 
     path: '{{user.homedir}}'
