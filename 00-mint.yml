@@ -10,5 +10,7 @@
    - include: 07-snap.yml
    - include: 08-updates.yml
    - include: 09-targz-apps.yml
+   - include: 10-npm.yml
+   - include: 11-vscode-ext.yml
    - include: 98-fonts.yml
    - include: 99-custom.yml

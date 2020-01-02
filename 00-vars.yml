@@ -78,6 +78,8 @@ gems:
 npms:
  - fx
  - dockly
+ - '@angular/cli'
+ - '@nestjs/cli'
 
 binaries:
 

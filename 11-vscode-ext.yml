@@ -1,0 +1,3 @@
+- name: '[VSCODE] Install vscode ext'
+  command: 'code --install-extension {{item}}'
+  with_items: '{{ npms | default([]) }}'
